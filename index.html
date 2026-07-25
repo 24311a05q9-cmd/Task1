@@ -1,68 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Task 2</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Advanced Styling & JavaScript</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <header>
-<h1>ApexPlanet Task-2</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
+    <h1>Advanced Styling and JavaScript</h1>
 </header>
-
-<div class="container">
-
-<!-- Contact Form -->
-
-<section class="card">
-<h2>Contact Form</h2>
-
-<form id="contactForm">
-
-<input type="text" id="name" placeholder="Enter Name">
-
-<input type="email" id="email" placeholder="Enter Email">
-
-<textarea id="message" placeholder="Your Message"></textarea>
-
-<button type="submit">Submit</button>
-
-</form>
-
-<p id="msg"></p>
-
+<section class="container">
+    <h2>Responsive Web Page</h2>
+    <p>
+        This webpage adjusts automatically for mobile, tablet, and desktop
+        using CSS Media Queries.
+    </p>
 </section>
-
-<!-- To Do List -->
-
-<section class="card">
-
-<h2>To-Do List</h2>
-
-<input type="text" id="taskInput" placeholder="Enter Task">
-
-<button onclick="addTask()">Add Task</button>
-
-<ul id="taskList"></ul>
-
+<section>
+    <h2>Image Carousel</h2>
+    <div class="slider">
+        <button onclick="prevSlide()">❮</button>
+        <img id="sliderImage"
+        src="https://picsum.photos/id/1015/700/400">
+        <button onclick="nextSlide()">❯</button>
+    </div>
 </section>
-
-</div>
-
-<footer>
-
-<p>Created for ApexPlanet Internship Task-2</p>
-
-</footer>
-
+<section class="api-section">
+    <h2>Random Joke API</h2>
+    <button onclick="getJoke()">Get Joke</button>
+    <p id="joke"></p>
+</section>
 <script src="script.js"></script>
-
 </body>
 </html>

@@ -1,62 +1,38 @@
-// Form Validation
-
-document.getElementById("contactForm").addEventListener("submit",function(e){
-
-e.preventDefault();
-
-let name=document.getElementById("name").value.trim();
-
-let email=document.getElementById("email").value.trim();
-
-let message=document.getElementById("message").value.trim();
-
-let msg=document.getElementById("msg");
-
-let pattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-if(name=="" || email=="" || message==""){
-msg.style.color="red";
-msg.innerHTML="Please fill all fields.";
-return;
+const images = [
+"https://picsum.photos/id/1015/700/400",
+"https://picsum.photos/id/1016/700/400",
+"https://picsum.photos/id/1018/700/400",
+"https://picsum.photos/id/1025/700/400"
+];
+let index = 0;
+function showImage(){
+    document.getElementById("sliderImage").src = images[index];
 }
-
-if(!pattern.test(email)){
-msg.style.color="red";
-msg.innerHTML="Invalid Email.";
-return;
+function nextSlide(){
+    index++;
+    if(index >= images.length){
+        index = 0;
+    }
+    showImage();
 }
-
-msg.style.color="green";
-msg.innerHTML="Form Submitted Successfully!";
-
-this.reset();
-
-});
-
-
-// To Do List
-
-function addTask(){
-
-let input=document.getElementById("taskInput");
-
-let task=input.value.trim();
-
-if(task===""){
-alert("Enter a task");
-return;
+function prevSlide(){
+    index--;
+    if(index < 0){
+        index = images.length-1;
+    }
+    showImage();
 }
+setInterval(nextSlide,3000);
+async function getJoke(){
+    try{
+        let response = await fetch("https://official-joke-api.appspot.com/random_joke");
+        let data = await response.json();
+        document.getElementById("joke").innerHTML =
+        "<strong>" + data.setup + "</strong><br><br>" + data.punchline;
+    }
+    catch(error){
+        document.getElementById("joke").innerHTML =
+        "Unable to fetch joke.";
 
-let li=document.createElement("li");
-
-li.innerHTML=task+" <button class='delete'>Delete</button>";
-
-li.querySelector("button").onclick=function(){
-li.remove();
-};
-
-document.getElementById("taskList").appendChild(li);
-
-input.value="";
-
+    }
 }
