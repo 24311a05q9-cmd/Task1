@@ -3,77 +3,78 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My Portfolio</title>
+<title>ShopEasy</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-    <h1>Shaik Shahina</h1>
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+
+<h2>ShopEasy</h2>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+
+<button id="cartBtn">
+🛒 Cart (<span id="count">0</span>)
+</button>
+
+</nav>
+
 </header>
 
-<section id="hero">
-    <h2>Web Developer</h2>
-    <p>Passionate about HTML, CSS, JavaScript and Java.</p>
-    <button onclick="scrollToProjects()">View Projects</button>
+<section class="hero">
+
+<h1>Welcome to ShopEasy</h1>
+
+<p>Buy the best products at affordable prices.</p>
+
+<input type="text" id="search" placeholder="Search products...">
+
+</section>
+
+<section id="products" class="products">
+
 </section>
 
 <section id="about">
-<h2>About Me</h2>
+
+<h2>About Us</h2>
+
 <p>
-I am a Computer Science student interested in Web Development,
-Java Programming and Problem Solving. I enjoy creating responsive
-websites and learning new technologies.
+ShopEasy is a demo e-commerce website created using HTML, CSS and JavaScript.
 </p>
-</section>
-
-<section id="projects">
-<h2>Projects</h2>
-
-<div class="card">
-<h3>Calculator</h3>
-<p>Simple calculator using HTML, CSS and JavaScript.</p>
-</div>
-
-<div class="card">
-<h3>To-Do List</h3>
-<p>Task management application with Local Storage.</p>
-</div>
-
-<div class="card">
-<h3>Portfolio Website</h3>
-<p>Responsive personal portfolio website.</p>
-</div>
 
 </section>
 
 <section id="contact">
-<h2>Contact</h2>
 
-<form id="contactForm">
-<input type="text" placeholder="Your Name" required>
+<h2>Contact Us</h2>
+
+<form>
+
+<input type="text" placeholder="Name" required>
 
 <input type="email" placeholder="Email" required>
 
 <textarea placeholder="Message"></textarea>
 
-<button type="submit">Send</button>
+<button>Send</button>
 
 </form>
-
-<p id="msg"></p>
 
 </section>
 
 <footer>
-<p>© 2026 Shaik Shahina | ApexPlanet Internship</p>
+
+<p>© 2026 ShopEasy</p>
+
 </footer>
 
 <script src="script.js"></script>
