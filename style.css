@@ -1,74 +1,117 @@
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
+
 body{
-    background:#f4f4f4;
-    text-align:center;
+background:#f5f5f5;
+color:#333;
 }
+
 header{
-    background:#0077b6;
-    color:white;
-    padding:20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:#0a9396;
+color:white;
+position:sticky;
+top:0;
 }
-.container{
-    margin:20px;
-    padding:20px;
-    background:white;
-    border-radius:10px;
+
+nav ul{
+display:flex;
+list-style:none;
 }
-.slider{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    margin:30px;
+
+nav ul li{
+margin-left:20px;
 }
-.slider img{
-    width:700px;
-    max-width:90%;
-    border-radius:10px;
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:bold;
 }
+
+#hero{
+height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:#94d2bd;
+}
+
+#hero h2{
+font-size:45px;
+margin-bottom:15px;
+}
+
 button{
-    padding:10px 20px;
-    margin:10px;
-    font-size:20px;
-    cursor:pointer;
+padding:12px 25px;
+background:#005f73;
+color:white;
+border:none;
+cursor:pointer;
+margin-top:20px;
 }
-.api-section{
-    background:white;
-    margin:20px;
-    padding:20px;
-    border-radius:10px;
+
+section{
+padding:60px;
 }
-#joke{
-    margin-top:20px;
-    font-size:18px;
-    color:#333;
+
+.card{
+background:white;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,.2);
 }
+
+form{
+display:flex;
+flex-direction:column;
+max-width:500px;
+}
+
+input,textarea{
+padding:10px;
+margin:10px 0;
+}
+
+footer{
+background:#0a9396;
+color:white;
+text-align:center;
+padding:20px;
+}
+
 @media(max-width:768px){
 
 header{
-    background:#0096c7;
+flex-direction:column;
 }
-.container{
-    font-size:18px;
+
+nav ul{
+margin-top:15px;
+flex-direction:column;
+text-align:center;
 }
-.slider img{
-    width:90%;
+
+nav ul li{
+margin:10px;
 }
+
+#hero h2{
+font-size:32px;
 }
-@media(max-width:480px){
-header{
-    background:#00b4d8;
+
+section{
+padding:30px;
 }
-.container{
-    font-size:16px;
-    padding:15px;
-}
-button{
-    font-size:16px;
-    padding:8px 15px;
-}
+
 }

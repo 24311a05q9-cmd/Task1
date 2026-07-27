@@ -1,36 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 3 - Advanced Styling & JavaScript</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <header>
-    <h1>Advanced Styling and JavaScript</h1>
+    <h1>Shaik Shahina</h1>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 </header>
-<section class="container">
-    <h2>Responsive Web Page</h2>
-    <p>
-        This webpage adjusts automatically for mobile, tablet, and desktop
-        using CSS Media Queries.
-    </p>
+
+<section id="hero">
+    <h2>Web Developer</h2>
+    <p>Passionate about HTML, CSS, JavaScript and Java.</p>
+    <button onclick="scrollToProjects()">View Projects</button>
 </section>
-<section>
-    <h2>Image Carousel</h2>
-    <div class="slider">
-        <button onclick="prevSlide()">❮</button>
-        <img id="sliderImage"
-        src="https://picsum.photos/id/1015/700/400">
-        <button onclick="nextSlide()">❯</button>
-    </div>
+
+<section id="about">
+<h2>About Me</h2>
+<p>
+I am a Computer Science student interested in Web Development,
+Java Programming and Problem Solving. I enjoy creating responsive
+websites and learning new technologies.
+</p>
 </section>
-<section class="api-section">
-    <h2>Random Joke API</h2>
-    <button onclick="getJoke()">Get Joke</button>
-    <p id="joke"></p>
+
+<section id="projects">
+<h2>Projects</h2>
+
+<div class="card">
+<h3>Calculator</h3>
+<p>Simple calculator using HTML, CSS and JavaScript.</p>
+</div>
+
+<div class="card">
+<h3>To-Do List</h3>
+<p>Task management application with Local Storage.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>Responsive personal portfolio website.</p>
+</div>
+
 </section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<form id="contactForm">
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Email" required>
+
+<textarea placeholder="Message"></textarea>
+
+<button type="submit">Send</button>
+
+</form>
+
+<p id="msg"></p>
+
+</section>
+
+<footer>
+<p>© 2026 Shaik Shahina | ApexPlanet Internship</p>
+</footer>
+
 <script src="script.js"></script>
+
 </body>
 </html>
